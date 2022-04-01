@@ -30,3 +30,28 @@ if key == '':
 m = Jkdk(username, password, key, province=province,
          city=city, position=position)
 m.jkdk()
+
+
+username = os.environ.get('username1')
+password = os.environ.get('password1')
+key = os.environ.get('key1')
+province = os.environ.get('province1')
+city = os.environ.get('city1')
+position = os.environ.get('position1')
+city = province+city
+
+
+print(f'username={username}')
+print(f'password={password}')
+print(f'SCKEY={key}')
+print(f'province={province}')
+print(f'city={city}')
+print(f'position={position}')
+
+if key == '':
+    key = None
+m = Jkdk(username, password, key, province=province,
+         city=city, position=position)
+m.jkdk()
+
+
